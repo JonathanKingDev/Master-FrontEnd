@@ -1,4 +1,4 @@
-# Proyecto
+# Layout
 
 Este repositorio contiene un proyecto configurado para usar Node.js como gestor de paquetes. Sigue las instrucciones a continuación para configurar y ejecutar el proyecto en tu entorno local.
 
