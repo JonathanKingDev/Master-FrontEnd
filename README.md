@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Master Frontend ! :lemon:
 
 Este repositorio contiene el código y los recursos de los módulos del Máster Frontend de Lemoncode.
@@ -12,7 +11,3 @@ Este repositorio contiene el código y los recursos de los módulos del Máster 
 ---
 
 [Lemoncode](https://lemoncode.net/master-frontend#master-frontend/inicio)
-=======
-# Master-FrontEnd
-
->>>>>>> e2d26ae654b27d71f07951d41b867a7986cee653
