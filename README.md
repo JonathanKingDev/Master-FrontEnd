@@ -10,4 +10,4 @@ Este repositorio contiene el código y los recursos de los módulos del Máster 
 
 ---
 
-[Lemoncode](https://lemoncode.net/master-frontend#master-frontend/inicio)
+Página web del máster: [Lemoncode](https://lemoncode.net/master-frontend#master-frontend/inicio)
