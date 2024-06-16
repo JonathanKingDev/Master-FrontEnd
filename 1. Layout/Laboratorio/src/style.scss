@@ -1,0 +1,62 @@
+@use "base" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container-1,
+.container-2,
+.container-3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 10px;
+
+  .box {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    max-width: 140px;
+    border-radius: 20px;
+
+    .color-box-text {
+      font-weight: bold;
+      color: $color-text;
+    }
+  }
+
+  @each $key, $colorY in $color-map {
+    &.container-#{$key} {
+      .base-color-#{$key} {
+        background-color: $colorY;
+      }
+      $i: 1;
+      @while $i <= 4 {
+        .darken-#{$i} {
+          background-color: darken($color: $colorY, $amount: $i * 10%);
+          .color-box-text {
+            color: darken($color: $color-text, $amount: $i * 10%);
+          }
+        }
+        .lighten-#{$i} {
+          background-color: lighten($color: $colorY, $amount: $i * 10%);
+          .color-box-text {
+            color: lighten($color: white, $amount: $i * 10%);
+          }
+        }
+        $i: $i + 1;
+      }
+    }
+  }
+
+  @media (max-width: 1300px) {
+    display: grid;
+    grid-template-columns: repeat(3, (auto));
+  }
+}

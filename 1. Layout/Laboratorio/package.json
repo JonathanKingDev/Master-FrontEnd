@@ -1,0 +1,14 @@
+{
+  "name": "1.-layout",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene un proyecto configurado para usar Node.js como gestor de paquetes. Sigue las instrucciones a continuación para configurar y ejecutar el proyecto en tu entorno local.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0"
+  }
+}
