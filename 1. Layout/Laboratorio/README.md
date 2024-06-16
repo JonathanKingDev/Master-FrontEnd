@@ -24,4 +24,4 @@ Clona el repositorio en tu máquina local utilizando Git:
 
 ### 3. Ejecutar el proyecto
 
-- npm start
+- npx parce .src/index.html
