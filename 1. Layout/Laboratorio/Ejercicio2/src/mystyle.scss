@@ -1,0 +1,9 @@
+@use "base" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include theme-a;
+}

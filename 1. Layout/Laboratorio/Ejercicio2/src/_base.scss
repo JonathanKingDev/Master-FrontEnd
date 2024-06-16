@@ -1,0 +1,94 @@
+$theme-1: (
+  1: red,
+  2: darkred,
+  3: pink,
+  4: white,
+);
+
+$theme-2: (
+  1: blue,
+  2: darkblue,
+  3: cyan,
+  4: white,
+);
+
+@mixin main-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 300px;
+  gap: 1px;
+}
+
+@mixin container-style {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  border: solid grey;
+  border-radius: 5px;
+  width: 130px;
+  height: 100px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+@mixin theme-a {
+  .main-container {
+    @include main-style;
+
+    @each $key, $color in $theme-1 {
+      .container-#{$key} {
+        background-color: $color;
+      }
+    }
+
+    .container-4 {
+      box-shadow: -15px 10px 15px rgba(0, 0, 0, 0.8);
+    }
+
+    .container-1,
+    .container-2,
+    .container-3,
+    .container-4 {
+      @include container-style;
+    }
+
+    .p-1 {
+      font-family: "Sans-Serif", Arial;
+    }
+
+    .p-2 {
+      font-family: "Sans-Serif", fantasy;
+    }
+  }
+}
+
+@mixin theme-b {
+  .main-container {
+    @include main-style;
+
+    @each $key, $color in $theme-2 {
+      .container-#{$key} {
+        background-color: $color;
+      }
+    }
+
+    .container-4 {
+      box-shadow: 15px 10px 15px rgba(0, 0, 0, 0.8);
+    }
+
+    .container-1,
+    .container-2,
+    .container-3,
+    .container-4 {
+      @include container-style;
+    }
+
+    .p-1 {
+      font-family: "Sans-Serif", fantasy;
+    }
+
+    .p-2 {
+      font-family: "Sans-Serif", Arial;
+    }
+  }
+}
