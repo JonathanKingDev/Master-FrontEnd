@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+//Cambiar entre el tema a o b para ver el cambio en los estilos.
 body {
   @include theme-a;
 }
