@@ -1,0 +1,81 @@
+@use "base" as *;
+
+* {
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  font-weight: 750;
+  background-color: $background;
+  color: $color-text;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 25px;
+
+  .header-logo {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header-buttons {
+    display: flex;
+    width: 50%;
+    justify-content: end;
+    align-items: center;
+    gap: 50px;
+  }
+}
+
+main {
+  padding: 20px;
+
+  .section-title {
+    #top-text::before {
+      content: $popular-item;
+    }
+
+    @media (max-width: $tablet-dimension) {
+      #top-text::before {
+        content: "3";
+      }
+    }
+  }
+
+  .top {
+    display: flex;
+
+    .top-item {
+      flex: 1 1 350px;
+
+      img {
+        width: 100%;
+        max-width: 350px;
+
+        @media (max-width: $tablet-dimension) {
+          min-width: 225px;
+        }
+      }
+
+      @media (max-width: $tablet-dimension) {
+        flex: 0 0 calc(33.333% - 20px);
+        &:nth-last-child(-n + 2) {
+          display: none;
+        }
+      }
+      @media (max-width: $mobile-dimension) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .first {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+//TODO: AVERIGUAR POR QUÉ NO SE ME PONE EN COLUMNA EN DIMENSIONES MOBILE
