@@ -31,11 +31,11 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
 1. **Clona este repositorio**:
 
-   git clone https://github.com/tu-usuario/proyecto-semilla.git
+   git clone
 
 2. **Accede al directorio del proyecto**:
 
-   cd proyecto-semilla
+   cd "nombre del proyecto"
 
 3. **Instala las dependencias**:
 
