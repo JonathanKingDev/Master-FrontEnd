@@ -1,0 +1,69 @@
+$--background-home: radial-gradient(
+  circle,
+  #00255c,
+  #0a1e56,
+  #121750,
+  #180f49,
+  #1c0542
+);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: $--background-home;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@keyframes moveAround {
+  0%,
+  100% {
+    transform: translate(100px, 0);
+  }
+  25% {
+    transform: translate(0px, -100px);
+  }
+  50% {
+    transform: translate(-100px, 0px);
+  }
+  75% {
+    transform: translate(0px, 100px);
+  }
+}
+
+@keyframes borderGlow {
+  0%,
+  100% {
+    border-color: white;
+    box-shadow: 0px 0px 10px 5px rgba(254, 254, 254, 0.5);
+  }
+  50% {
+    border-color: cyan;
+    box-shadow: 0 0 15px 10px rgba(0, 255, 255, 0.7);
+  }
+}
+
+.wellcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  height: 200px;
+  padding: 20px;
+  background-color: darkblue;
+  animation: moveAround 2s infinite ease-in-out, borderGlow 3s infinite;
+}
+
+.logo {
+  width: 60px;
+}

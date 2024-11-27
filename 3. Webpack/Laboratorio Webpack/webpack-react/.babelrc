@@ -1,0 +1,8 @@
+{
+  //Configuration for transpiling ES6 code
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ]
+}
